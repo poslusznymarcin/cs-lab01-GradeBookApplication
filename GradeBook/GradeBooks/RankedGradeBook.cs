@@ -15,7 +15,7 @@ namespace GradeBook.GradeBooks
         }
         public override void CalculateStatistics()
         {
-            if (Students.Count < 5 )
+            if (Students.Count < 5)
             {
                 Console.WriteLine("Ranked grading requires at lest 5 students");
             }
@@ -40,7 +40,6 @@ namespace GradeBook.GradeBooks
                 if (averageGrade >= grade) break;
 
                 highestCount++;
-
                 if (highestCount >= top)
                 {
                     highestCount -= top;
@@ -54,14 +53,14 @@ namespace GradeBook.GradeBooks
                 3 => 'C',
                 2 => 'D',
                 _ => 'F'
-            }
+            };
         }
 
         public override void CalculateStudentStatistics(string name)
         {
-            if (Students.Count < 5 )  
+            if (Students.Count < 5)  
             {
-                Console.WriteLine("Ranked grading requires at lest 5 students");
+                Console.WriteLine("Ranked grading requires at lest 5 students.");
             }
             else 
             { 

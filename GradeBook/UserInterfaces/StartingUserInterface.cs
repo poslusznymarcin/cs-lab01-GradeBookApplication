@@ -1,6 +1,6 @@
 ﻿using GradeBook.GradeBooks;
 using System;
-using System.Numerisc;
+using System.Numerics;
 
 namespace GradeBook.UserInterfaces
 {
@@ -37,12 +37,12 @@ namespace GradeBook.UserInterfaces
             var parts = command.Split(' ');
             if (parts.Length != 4)
             {
-                Console.WriteLine("Command not valid, Create requires a name and type of gradebook, if it's weghted (true / false). :)");
+                Console.WriteLine("Command not valid, Create requires a name, type of gradebook, if it's weighted (true / false).");
                 return;
             }
-
             var name = parts[1];
             BaseGradeBook gradeBook;
+
 
             if (parts[2] == "standard")
             {
@@ -58,7 +58,6 @@ namespace GradeBook.UserInterfaces
                 Console.WriteLine(parts[2] + " is not a supported type of gradebook, please try again");
                 return;
             }
-
             Console.WriteLine("Created gradebook {0}.", name);
             GradeBookUserInterface.CommandLoop(gradeBook);
         }
